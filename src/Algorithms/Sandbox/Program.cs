@@ -19,7 +19,7 @@ namespace Sandbox
                 };
             }
 
-            IComparissonSorter<SortingObject> sorter = new BubbleSorter<SortingObject>();
+            IComparissonSorter<SortingObject> sorter = new SelectionSorter<SortingObject>();
             SortingComparer comparer = new SortingComparer();
             sorter.Sort(array,comparer);
 
