@@ -30,8 +30,8 @@
                     {
                         min = j;
                     }
-                    this.Swap(array, min, i);
                 }
+                this.Swap(array, min, i);
             }
         }
 
