@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Algorithms.Sorting.Comparisson
+﻿namespace Algorithms.Sorting.Comparisson
 {
+    using System;
+    using System.Collections.Generic;
     /// <summary>
     /// Class Implementing quick sort algorithm.
     /// </summary>
