@@ -1,4 +1,5 @@
-﻿using Algorithms.Sorting.Comparisson;
+﻿using Algorithms.Shuffling;
+using Algorithms.Sorting.Comparisson;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -19,7 +20,12 @@ namespace Sandbox
                 };
             }
 
-            IComparissonSorter<SortingObject> sorter = new InsertionSorter<SortingObject>();
+            //shuffles the array
+            IShuffler<SortingObject> shuffler = new FisherYatesShuffler<SortingObject>();
+            shuffler.Shuffle(array);
+
+
+            IComparissonSorter<SortingObject> sorter = new QuickSorter<SortingObject>(0,array.Length-1);
             SortingComparer comparer = new SortingComparer();
             sorter.Sort(array,comparer);
 
@@ -33,7 +39,7 @@ namespace Sandbox
                 var isEqual = actualResult[i] == array[i].Property;
                 if (!isEqual)
                 {
-                    throw new ArgumentNullException();
+                    throw new ArgumentException();
                 }
             }
         }
