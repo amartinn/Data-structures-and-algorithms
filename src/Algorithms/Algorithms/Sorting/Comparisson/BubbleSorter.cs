@@ -1,12 +1,12 @@
 ﻿namespace Algorithms.Sorting.Comparisson
 {
     using System.Collections.Generic;
-
+   
     /// <summary>
     /// Class implementing bubble sort algorithm.
     /// </summary>
     /// <typeparam name="T">Type of the array element.</typeparam>
-    public sealed class BubbleSorter<T> : IComparissonSorter<T>
+    public class BubbleSorter<T> : IComparissonSorter<T>
     {
         /// <summary>
         /// Sorts the array with specific comparer.
