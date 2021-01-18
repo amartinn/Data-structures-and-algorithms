@@ -5,14 +5,14 @@
     /// <summary>
     /// Sorting an array in ascending order <typeparamref name="T"/> using comparisson sort.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Type of the object that is going to be sorted.</typeparam>
     public interface IComparissonSorter<T>
     {
         /// <summary>
         /// Sorts an array of <typeparamref name="T"/> using a comparer in ascending order.
         /// </summary>
-        /// <param name="array">The array to sort</param>
-        /// <param name="comparer">Comparer to compare elements of <paramref name="array"/></param>
+        /// <param name="array">The array to sort.</param>
+        /// <param name="comparer">Comparer to compare elements of <paramref name="array"/>.</param>
         void Sort(T[] array, IComparer<T> comparer);
     }
 }

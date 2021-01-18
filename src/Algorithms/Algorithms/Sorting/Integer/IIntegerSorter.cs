@@ -6,9 +6,9 @@
     public interface IIntegerSorter
     {
         /// <summary>
-        /// Sorts integer array in ascending order
+        /// Sorts integer array in ascending order.
         /// </summary>
-        /// <param name="array">The Array to sort</param>
+        /// <param name="array">The Array to sort.</param>
         void Sort(int[] array);
     }
 }

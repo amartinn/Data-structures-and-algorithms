@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Algorithms.Sorting.Comparisson
+﻿namespace Algorithms.Sorting.Comparisson
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// Class implementing bubble sort algorithm.
     /// </summary>
@@ -15,18 +13,18 @@ namespace Algorithms.Sorting.Comparisson
         /// Stable : Yes
         /// Time Complexity:
         /// Best: O(n)  Average: O(n^2)   Worst: O(n^2)
-        /// Method: Exchanging 
+        /// Method: Exchanging
         /// Memory: O(1)
         /// where n is the length of the array.
         /// </summary>
-        /// <param name="array">The array to sort</param>
-        /// <param name="comparer">Compares elements</param>
+        /// <param name="array">The array to sort.</param>
+        /// <param name="comparer">Compares elements.</param>
         public void Sort(T[] array, IComparer<T> comparer)
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
                 bool changed = false;
-                for (int j = 0; j < array.Length - i -1; j++)
+                for (int j = 0; j < array.Length - i - 1; j++)
                 {
                     T current = array[j];
                     T next = array[j + 1];
@@ -37,6 +35,7 @@ namespace Algorithms.Sorting.Comparisson
                         changed = true;
                     }
                 }
+
                 if (!changed)
                 {
                     break;
