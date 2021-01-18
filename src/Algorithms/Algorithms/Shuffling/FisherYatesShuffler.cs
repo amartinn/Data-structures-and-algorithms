@@ -1,6 +1,7 @@
 ﻿namespace Algorithms.Shuffling
 {
     using System;
+
     /// <summary>
     /// Class implementing Fisher-Yates shuffling algorithm.
     /// </summary>
@@ -8,6 +9,7 @@
     public class FisherYatesShuffler<T> : IShuffler<T>
     {
         private readonly Random random = new Random();
+
         /// <summary>
         /// Shuffles the array.
         /// Stable : No
@@ -22,8 +24,8 @@
         {
             for (int i = 0; i < array.Length; i++)
             {
-                int index = random.Next(i);
-                this.Swap(array,index, i);
+                int index = this.random.Next(i);
+                this.Swap(array, index, i);
             }
         }
 

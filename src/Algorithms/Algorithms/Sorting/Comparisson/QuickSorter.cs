@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+
     /// <summary>
     /// Class Implementing quick sort algorithm.
     /// </summary>
@@ -16,23 +17,26 @@
             this.Left = left;
             this.Right = right;
         }
+
         /// <summary>
-        /// Starting Index
+        /// Gets or sets starting Index.
         /// </summary>
-        public int Left 
-        { 
-            get => this.left; 
+        public int Left
+        {
+            get => this.left;
             set
             {
                 if (value < 0)
                 {
                     throw new IndexOutOfRangeException("The given index is invalid!");
                 }
+
                 this.left = value;
-            } 
+            }
         }
+
         /// <summary>
-        /// Ending index
+        /// Gets or sets ending index.
         /// </summary>
         public int Right
         {
@@ -43,15 +47,17 @@
                 {
                     throw new IndexOutOfRangeException("The given index is invalid!");
                 }
+
                 this.right = value;
             }
         }
+
         /// <summary>
         /// Sorts the array with specific comparer.
         /// Stable : Depends
         /// Time Complexity:
         /// Best: O(n*log(n))  Average: O(n*log(n))   Worst: O(n^2)
-        /// Method: Partition 
+        /// Method: Partition
         /// Memory: O(log(n))
         /// where n is the length of the array.
         /// </summary>
@@ -64,17 +70,17 @@
         {
             if (left < right)
             {
-                int partitionIndex = this.Partition(array,comparer, left, right);
+                int partitionIndex = this.Partition(array, comparer, left, right);
 
-                this.Sort(array,comparer, left, partitionIndex - 1);
-                this.Sort(array,comparer, partitionIndex + 1, right);
+                this.Sort(array, comparer, left, partitionIndex - 1);
+                this.Sort(array, comparer, partitionIndex + 1, right);
             }
         }
 
         private int Partition(T[] array, IComparer<T> comparer, int left, int right)
         {
             T pivot = array[right];
-            int leftIndex = (left - 1);
+            int leftIndex = left - 1;
 
             for (int j = left; j < right; j++)
             {
@@ -91,6 +97,7 @@
 
             return leftIndex + 1;
         }
+
         private void Swap(T[] array, int firstIndex, int secondIndex)
         {
             T temp = array[firstIndex];
