@@ -12,6 +12,11 @@
         private int left;
         private int right;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuickSorter{T}"/> class.
+        /// </summary>
+        /// <param name="left">Starting index.</param>
+        /// <param name="right">Ending index.</param>
         public QuickSorter(int left, int right)
         {
             this.Left = left;
